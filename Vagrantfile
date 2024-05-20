@@ -1,10 +1,9 @@
 Vagrant.configure("2") do |config|
   ips = ["192.168.50.11", "192.168.50.12"]
 
-  (1..2).each do |i|
+  (2..2).each do |i|
     config.vm.define "geocit-server#{i}" do |ubuntu|
-      config.vm.box = "bento/ubuntu-24.04"
-      config.vm.box_version = "202404.26.0"
+      config.vm.box = "bento/ubuntu-22.04"
       ubuntu.vm.hostname = "geocit-server#{i}"
       ubuntu.vm.network "private_network", ip: ips[i-1]
 
@@ -21,9 +20,10 @@ Vagrant.configure("2") do |config|
       # Provisioning necessary credentials
       ubuntu.vm.provision "file", source: "./credentials.sh", destination: "~/creds/credentials.sh"
       # Booting up first VM with main project structure
-      # if i == 1
-      #   config.vm.provision "shell", path: "./startup_script.sh"
-      # end
+      if i == 1
+        ubuntu.vm.provision "shell", path: "./startup_script.sh"
+        ubuntu.vm.provision "file", source: "./credentials.sh", destination: "~/creds/credentials.sh"
+      end
 
       # Booting up the second VM with DB
       if i == 2
