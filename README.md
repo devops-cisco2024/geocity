@@ -11,7 +11,8 @@
 	 * [`db.username`](https://git.io/vARyo) & [`db.password`](https://git.io/vARyK) - db credentials, same as in credentials.sh file
   Also edit the liquidbase credentials and SMTP server credentials
 
-  Build the backend and frontend with commands:
+6.Build the backend and frontend with commands:
+
 mvn clean install
 sudo mv target/citizen.war /opt/tomcat/webapps/
 sudo systemctl restart tomcat 
