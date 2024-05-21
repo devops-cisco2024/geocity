@@ -55,7 +55,7 @@
         <spring-data-jpa.version>2.0.2.RELEASE</spring-data-jpa.version>
         <junit.version>4.12</junit.version>
         <dbunit.version>2.5.4</dbunit.version>
-        <springtestdbunit.version>1.3.0</springtestdbunit.version>
+        <springtestdbunit.veriosn>1.3.0</springtestdbunit.veriosn>
         <assertj.version>3.8.0</assertj.version>
 	    <javax.mail.version>1.6.0</javax.mail.version>
 	    <apache.commons.lang>3.7</apache.commons.lang>
@@ -187,11 +187,11 @@
             <version>${postgresql.connector.version}</version>
         </dependency>
 
-	<!-- <dependency>
+	<dependency>
     	    <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.2.5</version>
-        </dependency> -->
+        </dependency>
 
         <!--Servlet API-->
         <dependency>
@@ -308,7 +308,7 @@
 	    <!--Javax validation-->
 	    <dependency>
 		    <groupId>javax.validation</groupId>
-		    <artifactId>javax.validation-api</artifactId>
+		    <artifactId>validation-api</artifactId>
 		    <version>${javax.validation.version}</version>
 	    </dependency>
 	    <!--Guava-->
@@ -358,7 +358,7 @@
         <dependency>
             <groupId>com.github.springtestdbunit</groupId>
             <artifactId>spring-test-dbunit</artifactId>
-            <version>${springtestdbunit.version}</version>
+            <version>${springtestdbunit.veriosn}</version>
             <scope>test</scope>
         </dependency>
         <!--AssertJ-->
@@ -498,7 +498,6 @@
 	        <plugin>
 		        <groupId>org.apache.maven.plugins</groupId>
 		        <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.1</version>
 		        <configuration>
 			        <failOnMissingWebXml>false</failOnMissingWebXml>
 		        </configuration>
@@ -521,13 +520,13 @@
                 </configuration>
             </plugin>
 
-            <!-- <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
-            </plugin> -->
+            </plugin>
 
             <plugin>
                 <groupId>org.liquibase</groupId>
