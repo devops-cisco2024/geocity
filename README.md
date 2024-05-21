@@ -9,12 +9,15 @@
 5. In config file [`~/Ch-058/src/main/resources/application.properties`](https://git.io/vA4Sw)
 	you need to edit properties:
 	 * [`db.username`](https://git.io/vARyo) & [`db.password`](https://git.io/vARyK) - db credentials, same as in credentials.sh file
-  Also edit the liquidbase credentials and SMTP server credentials
+
+Also edit the liquidbase credentials and SMTP server credentials
 
 6.Build the backend and frontend with commands:
 
 mvn clean install
+
 sudo mv target/citizen.war /opt/tomcat/webapps/
+
 sudo systemctl restart tomcat 
 
 if you want to rebuild the backend, clear the webapps directory and build again.
