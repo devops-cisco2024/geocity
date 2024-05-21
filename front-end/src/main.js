@@ -23,7 +23,7 @@ import Header from '@/components/header/Header'
 import router from './router'
 import i18n from './i18n'
 
-export const backEndUrl = 'http://localhost:8080/citizen/'
+export const backEndUrl = 'http://192.168.211.131:8080/citizen/'
 
 Vue.use(VueResource)
 Vue.use(VueCookie)
@@ -51,10 +51,10 @@ new Vue({
   router,
   i18n,
   template: '<App/>',
-  components: {App}
+  components: { App }
 })
 
 // eslint-disable-next-line
-export function getServerAddress(){
+export function getServerAddress() {
   return backEndUrl
 }
