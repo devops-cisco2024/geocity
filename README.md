@@ -19,7 +19,7 @@ sudo systemctl restart tomcat
 if you want to rebuild the backend, clear the webapps directory and build again.
 
 
-Some necessary information for frontend part and app functionality:
+Some necessary information for frontend part and app functionality after the app deployment:
 
 [swagger](http://[input your IP]/citizen/swagger-ui.html)
 
