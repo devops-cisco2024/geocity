@@ -308,7 +308,7 @@
 	    <!--Javax validation-->
 	    <dependency>
 		    <groupId>javax.validation</groupId>
-		    <artifactId>validation-api</artifactId>
+		    <artifactId>javax.validation-api</artifactId>
 		    <version>${javax.validation.version}</version>
 	    </dependency>
 	    <!--Guava-->
